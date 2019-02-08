@@ -24,7 +24,9 @@ This is a powerful Reverse geocoding parser module for Node.JS
 ```
 
 # Example
+- Input
 ```
+//Note: It is not mandatory to send all value just send the reverse geocode data addresss component as it is
 let address_components = [
     {
         "long_name": "5th Floor",
@@ -112,46 +114,51 @@ let address_components = [
         "types": ["postal_code"]
     }
 ];
-//Note: It is not mandatory to send all value just send the reverse geo code data addresss component as it is
+```
 
-// callback method
-
+- callback method
+```
 AddressParser.Parse_Reverse_GeoCode_Address(address_components, function (err, ParsedData) {
     if (err) console.error(err);
     console.log("Parsed Data--->", ParsedData);
 });
+```
 
-// async/await method
-
+- async/await method
+```
 (async function () {
     let ParsedData = await AddressParser.Parse_Reverse_GeoCode_Address(address_components);
     console.log("Parsed Data--->", ParsedData);
 }());
-
-// promise method
-
+```
+- promise method
+```
 AddressParser.Parse_Reverse_GeoCode_Address(address_components).then((ParsedData) => {
     console.log("Parsed Data--->", ParsedData);
 });
-
 ```
 # Response(JSON Object)
 ```
+
+//Note Default values are Empty Strings("") if not available in input
 {
-  "Postal_Code": "500081", //Postal code or Zipcode or Pincode
-  "Country": "India", //Country
-  "Area_Level_1": "Telangana", //State or Territory 
-  "Area_Level_2": "Ranga Reddy", //District or Counties
-  "Area_Level_3": "Greater Hyderabad", //colloquial_area or entity above the locality
-  "Postal_Town": "Hyderabad/Secunderabad", //Postal Town
-  "Locality": "Hyderabad", // City or Village or Town
-  "Sub_Locality_1": "Gachibowli", // Inner level of Locality
-  "Sub_Locality_2": "Telecom Nagar Extension", // Inner lervel of Sublocality 1
-  "Sub_Locality_3": "Industrial Area",// Inner lervel of Sublocality 2
-  "Neighborhood": "MNC Society", // Neighborhood or Colony
-  "Route": "Old Mumbai Highway", //Route for the address
-  "Street_Number": "2-48/5/6", // Street Number
-  "Premises": " 2-48/5/6, Vaishnavi Cynosure" //Premises Details if Available
+  "Postal_Code": "500081",
+  "Country": "India",
+  "Area_Level_1": "Telangana",
+  "Area_Level_2": "Ranga Reddy",
+  "Area_Level_3": "Greater Hyderabad",
+  "Postal_Town": "Hyderabad/Secunderabad",
+  "Locality": "Hyderabad",
+  "Sub_Locality_1": "Gachibowli",
+  "Sub_Locality_2": "Telecom Nagar Extension",
+  "Sub_Locality_3": "Industrial Area",
+  "Neighborhood": "MNC Society",
+  "Route": "Old Mumbai Highway",
+  "Street_Address": "West Edge Street",
+  "Street_Number": "2-48/5/6",
+  "Premises": "2-48/5/6, Vaishnavi Cynosure",
+  "Sub_Premises": "Unispace Business Center",
+  "Floor": "5th Floor"
 }
 
 ```
