@@ -1,0 +1,40 @@
+{
+  "name": "parse-google-address",
+  "version": "1.0.0",
+  "description": "This module is use to parse reverse geocode address component.",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google",
+    "parse",
+    "parser",
+    "google-parser",
+    "google-address-parser",
+    "address-parser",
+    "geocode",
+    "geocoding",
+    "reverse",
+    "address parser",
+    "address",
+    "address_components",
+    "api",
+    "map",
+    "lat",
+    "long",
+    "lng",
+    "latitude",
+    "longitude"
+  ],
+  "author": "Ratan Uday Kumar (ratan.uday.kumar@gmail.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udayratan/parse-google-address.git"
+  },
+  "bugs": {
+    "url": "https://github.com/udayratan/parse-google-address/issues"
+  },
+  "homepage": "https://github.com/udayratan/parse-google-address#readme"
+}
