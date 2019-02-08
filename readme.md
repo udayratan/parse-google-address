@@ -26,7 +26,7 @@ This is a powerful Reverse geocoding parser module for Node.JS
 # Input!
 
 ```
-//Note: It is not mandatory to send all value just send the reverse geocode data addresss component as it is
+//Note: It is not mandatory to send all values just send the reverse geocode data address_components as it is
 let address_components = [
     {
         "long_name": "5th Floor",
