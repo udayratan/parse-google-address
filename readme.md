@@ -27,9 +27,24 @@ This is a powerful Reverse geocoding parser module for Node.JS
 ```
 let address_components = [
     {
-        "long_name": " 2-48/5/6, Vaishnavi Cynosure",
+        "long_name": "5th Floor",
+        "short_name": "5th",
+        "types": ["floor"]
+    },
+    {
+        "long_name": "Unispace Business Center",
+        "short_name": "Unispace",
+        "types": ["subpremise"]
+    },
+    {
+        "long_name": "2-48/5/6, Vaishnavi Cynosure",
         "short_name": "Vaishnavi Cynosure",
         "types": ["premise"]
+    },
+    {
+        "long_name": "West Edge Street",
+        "short_name": "West Edge Street",
+        "types": ["street_address"]
     },
     {
         "long_name": "2-48/5/6",
@@ -97,6 +112,7 @@ let address_components = [
         "types": ["postal_code"]
     }
 ];
+//Note: It is not mandatory to send all value just send the reverse geo code data addresss component as it is
 
 // callback method
 

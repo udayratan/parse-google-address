@@ -16,8 +16,11 @@ function Process_Reverse_GeoCode(ARRAY) {
             let Postal_Town_Data = ARRAY.find(item => item.types.includes("postal_town"));
             let Neighborhood_Data = ARRAY.find(item => item.types.includes("neighborhood"));
             let Route_Data = ARRAY.find(item => item.types.includes("route"));
+            let Street_Address_Data = ARRAY.find(item => item.types.includes("street_address"));
             let Street_Number_Data = ARRAY.find(item => item.types.includes("street_number"));
             let Premises_Data = ARRAY.find(item => item.types.includes("premise"));
+            let Sub_Premises_Data = ARRAY.find(item => item.types.includes("subpremise"));
+            let Floor_Data = ARRAY.find(item => item.types.includes("floor"));
             ParsedData.Postal_Code = (Postal_Data == null) ? "" : Postal_Data.long_name;
             ParsedData.Country = (Country_Data == null) ? "" : Country_Data.long_name;
             ParsedData.Area_Level_1 = (Area_Level_1_Data == null) ? "" : Area_Level_1_Data.long_name;
@@ -30,8 +33,11 @@ function Process_Reverse_GeoCode(ARRAY) {
             ParsedData.Sub_Locality_3 = (Sub_Locality_3_Data == null) ? "" : Sub_Locality_3_Data.long_name;
             ParsedData.Neighborhood = (Neighborhood_Data == null) ? "" : Neighborhood_Data.long_name;
             ParsedData.Route = (Route_Data == null) ? "" : Route_Data.long_name;
+            ParsedData.Street_Address = (Street_Address_Data == null) ? "" : Street_Address_Data.long_name;
             ParsedData.Street_Number = (Street_Number_Data == null) ? "" : Street_Number_Data.long_name;
             ParsedData.Premises = (Premises_Data == null) ? "" : Premises_Data.long_name;
+            ParsedData.Sub_Premises = (Sub_Premises_Data == null) ? "" : Sub_Premises_Data.long_name;
+            ParsedData.Floor = (Floor_Data == null) ? "" : Floor_Data.long_name;
             resolve(ParsedData);
         });
     });
