@@ -23,8 +23,8 @@ This is a powerful Reverse geocoding parser module for Node.JS
         var AddressParser = require('parse-google-address');
 ```
 
-# Example
-- Input
+# Input!
+
 ```
 //Note: It is not mandatory to send all value just send the reverse geocode data addresss component as it is
 let address_components = [
@@ -115,6 +115,7 @@ let address_components = [
     }
 ];
 ```
+# Usage!
 
 - callback method
 ```
@@ -137,7 +138,7 @@ AddressParser.Parse_Reverse_GeoCode_Address(address_components).then((ParsedData
     console.log("Parsed Data--->", ParsedData);
 });
 ```
-# Response(JSON Object)
+# Response(JSON Object)!
 ```
 
 //Note Default values are Empty Strings("") if not available in input

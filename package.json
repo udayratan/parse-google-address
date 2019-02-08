@@ -1,6 +1,6 @@
 {
   "name": "parse-google-address",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This module is use to parse reverse geocode address component.",
   "main": "./index.js",
   "scripts": {
